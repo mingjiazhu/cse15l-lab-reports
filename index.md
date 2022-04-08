@@ -31,7 +31,7 @@ Italicized text is the *cat's meow*.
 - Third item
 - Fourth item
 
-<img src="lab_report_1_images/remote_connection.png" width="500" />
+<img src="lab-report-1-images/remote_connection.png" width="500" />
 
 [Lab Report 1](lab-report-1-week-2.html)
 
