@@ -42,3 +42,8 @@ Then we will be able to "ssh" or "scp" without a password.
 Run "javac WhereAmI.java; java WhereAmI". Then run "scp WhereAmI.java cs15lsp22adv@ieng6.ucsd.edu:~/"
 <br/><br/>
 <img src="lab-report-1-images/optimize.png" width="500" />
+
+#### References
+
+[Lab 1 Writeup](https://docs.google.com/document/d/1AO6RDoJnaWxMui-UFjEa_2bbQ4qcANpbIpPuV-awsOg/edit)
+[Lab 2 Writeup](https://docs.google.com/document/d/1Nw6gdehL-BzqjeVV1jzi_Ni4cdpx2uquLztLGTdzUdU/edit)
