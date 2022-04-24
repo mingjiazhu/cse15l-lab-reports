@@ -1,19 +1,35 @@
 ## Week 4 Lab Report
 
-### Three Code Changes to Fix a Bug
+### Code Change 1
 
-Download VSCode for Mac and install it. The screenshot below shows the interface of VSCode after opening it.
-<br/><br/>
-<img src="lab-report-1-images/install_vscode.png" width="500" />
+<img src="lab-report-2-images/code_change_1.png" width="500" />
+[Link to the test file for a failure-inducing input that prompted us to make code change 1](https://github.com/mingjiazhu/markdown-parser/blob/858454b676860c0b815ad0236e108a17d2c36d18/MarkdownParseTest.java)
 
-### Remotely Connecting
+Symptom:
 
-First, install OpenSSH, lookup for CSE15L account and change the password of it. Then type in `ssh _[CSE15L-username]_@ieng6.ucsd.edu` in terminal and enter password. 
-<br/><br/>
-<img src="lab-report-1-images/remote_connection.png" width="500" />
+<img src="lab-report-2-images/symp1.png" width="500" />
+Relationship:
+We didn't update the currentIndex variable in the while loop (this is an error in our code), so the function keep running and never ends. The error causes the  OutOfMemory symptom. In the tester we ran the getLinks function, which triggered the symptom.
 
-### Trying Some Commands
 
-Try `ls` and `cd` commands. `ls` command gives us a list of subdirectories in the current directories; `cd` command change the directory.
-<br/><br/>
-<img src="lab-report-1-images/try_commands.png" width="500" />
+### Code Change 2
+
+<img src="lab-report-2-images/code_change_2.png" width="500" />
+[Link to the test file for a failure-inducing input that prompted us to make code change 2](https://github.com/mingjiazhu/markdown-parser/blob/0ea309748b9e688eb5a6393f5aaa39deb614e652/MarkdownParseTest.java)
+
+Symptom:
+
+<img src="lab-report-2-images/symp2.png" width="500" />
+Relationship:
+In the former code we didn't consider the case of image, so it doesn't work for a file with an image reference. This bug caused the failure in TestLinksImage function, the assertEquals failed, the program produced wrong answer. The tester that tested the getLinks function with testImage.md is failure-inducing input, which triggered the symptom.
+
+### Code Change 3
+
+<img src="lab-report-2-images/code_change_3.png" width="500" />
+[Link to the test file for a failure-inducing input that prompted us to make code change 1](https://github.com/mingjiazhu/markdown-parser/blob/2481cc0890a89726ed85981f1b6fa94a84ed0307/MarkdownParseTest.java)
+
+Symptom:
+
+<img src="lab-report-2-images/symp3.png" width="500" />
+Relationship:
+We didn't consider the case when the file contains no links, so this bug caused the symptom: the program produced wrong answer. The failure-inducing input was in the TestLinksNoLink function, which called the getLinks function on a file with no link. This triggered the symptom.
