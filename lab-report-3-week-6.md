@@ -1,38 +1,63 @@
-## Week 4 Lab Report
+## Week 6 Lab Report
 
-### Code Change 1
+### Streamlining ssh Configuration
 
-<img src="lab-report-2-images/code_change_1.png" width="500" />
+1. Show your .ssh/config file, and how you edited it (with VScode, another program, etc)
+
+<img src="lab-report-3-images/config_file.png" width="500" />
 <br>
-[Link to the test file for a failure-inducing input that prompted us to make code change 1](https://github.com/mingjiazhu/markdown-parser/blob/858454b676860c0b815ad0236e108a17d2c36d18/MarkdownParseTest.java)
-
-Symptom:
-
-<img src="lab-report-2-images/symp1.png" width="500" />
+I edited this file through txt. 
 <br>
-We didn't update the currentIndex variable in the while loop (this is an error in our code), so the function keep running and never ends. The error causes the  OutOfMemory symptom. In the tester we ran the getLinks function, which triggered the symptom.
 
+2. Show the ssh command logging you into your account using just the alias you chose.
 
-### Code Change 2
-
-<img src="lab-report-2-images/code_change_2.png" width="500" />
+<img src="lab-report-3-images/login.png" width="500" />
 <br>
-[Link to the test file for a failure-inducing input that prompted us to make code change 2](https://github.com/mingjiazhu/markdown-parser/blob/0ea309748b9e688eb5a6393f5aaa39deb614e652/MarkdownParseTest.java)
-
-Symptom:
-
-<img src="lab-report-2-images/symp2.png" width="500" />
+I set the host name to be "ieng6", so now I'm able to ssh with `ssh ieng6`.
 <br>
-In the former code we didn't consider the case of image, so it doesn't work for a file with an image reference. This bug caused the failure in TestLinksImage function, the assertEquals failed, the program produced wrong answer. The tester that tested the getLinks function with testImage.md is failure-inducing input, which triggered the symptom.
 
-### Code Change 3
-
-<img src="lab-report-2-images/code_change_3.png" width="500" />
+3. Show an scp command copying a file to your account using just the alias you chose.
+<img src="lab-report-3-images/scp.png" width="500" />
 <br>
-[Link to the test file for a failure-inducing input that prompted us to make code change 3](https://github.com/mingjiazhu/markdown-parser/blob/2481cc0890a89726ed85981f1b6fa94a84ed0307/MarkdownParseTest.java)
-
-Symptom:
-
-<img src="lab-report-2-images/symp3.png" width="500" />
+I have successfully scp MarkdownParse.java file.
 <br>
-We didn't consider the case when the file contains no links, so this bug caused the symptom: the program produced wrong answer. The failure-inducing input was in the TestLinksNoLink function, which called the getLinks function on a file with no link. This triggered the symptom.
+
+### Setup Github Access from ieng6
+
+1. Show where the public key you made is stored on Github and in your user account (screenshot).
+<img src="lab-report-3-images/public_key.png" width="500" />
+<img src="lab-report-3-images/public_key_2.png" width="500" />
+<br>
+This two screenshots show the public key on Github and in my account (id_rsa.pub)
+
+2. Show where the private key you made is stored on your user account (but not its contents) as a screenshot.
+<img src="lab-report-3-images/private_key.png" width="500" />
+<br>
+I have also set up a private key (id_ed25519.pub).
+
+3. Show running git commands to commit and push a change to Github while logged into your ieng6 account.
+<img src="lab-report-3-images/push_1.png" width="500" />
+<img src="lab-report-3-images/push_2.png" width="500" />
+<br>
+I have made a change to the MarkdownParse.java file, and then used `git push origin main` to push the change to GitHub.
+
+4. Show a link for the resulting commit.
+[Link to the resulting commit](https://github.com/mingjiazhu/markdown-parser/commit/a75d814102b5d9647a79e656159be8fcda9d7164)
+
+### Copy whole directories with scp -r
+
+1. Show copying your whole markdown-parse directory to your ieng6 account.
+<img src="lab-report-3-images/scp_whole.png" width="500" />
+<br>
+I ran `scp -r . ieng6:~/markdown-parse` to scp the whole directory.
+
+2. Show logging into your ieng6 account after doing this and compiling and running the tests for your repository.
+<img src="lab-report-3-images/run_test.png" width="500" />
+After scp the whole directory, I logged in into my ieng6 account, run `run test` command, which contains the commands to compile and run the tests file. From the screenshot we can see that it succeed.
+
+3. Show (like in the last step of the first lab) combining scp, ;, and ssh to copy the whole directory and run the tests in one line.
+
+<img src="lab-report-3-images/one_line_1.png" width="500" />
+<img src="lab-report-3-images/one_line_2.png" width="500" />
+<br>
+I ran the command `scp -r . ieng6:~/markdown-parser; ssh ieng6 "cd markdown-parser"; make test`, which successfully did all of the task in oneline.
