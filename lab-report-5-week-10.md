@@ -23,6 +23,7 @@ test 194:
 actual outputs:
 <br>
 <img src="lab-report-5-images/test194.png" width="500" />
+<br>
 expected output:
 <br>
 <img src="lab-report-5-images/194-preview.png" width="500" />
@@ -35,6 +36,7 @@ test 201:
 actual outputs:
 <br>
 <img src="lab-report-5-images/test201.png" width="500" />
+<br>
 expected output:
 <br>
 <img src="lab-report-5-images/201-preview.png" width="500" />
@@ -47,6 +49,7 @@ test 22:
 actual outputs:
 <br>
 <img src="lab-report-5-images/test22.png" width="500" />
+<br>
 expected output:
 <br>
 <img src="lab-report-5-images/22-preview.png" width="500" />
@@ -59,6 +62,7 @@ test 32:
 actual outputs:
 <br>
 <img src="lab-report-5-images/test32.png" width="500" />
+<br>
 expected output:
 <br>
 <img src="lab-report-5-images/32-preview.png" width="500" />
@@ -71,6 +75,7 @@ test 41:
 actual outputs:
 <br>
 <img src="lab-report-5-images/test41.png" width="500" />
+<br>
 expected output:
 <br>
 <img src="lab-report-5-images/41-preview.png" width="500" />
