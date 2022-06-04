@@ -97,6 +97,7 @@ expected output:
 <img src="lab-report-5-images/41-preview.png" width="500" />
 <br>
 The given implementation (right) produces correct results. For my implementation, since I'm not considering the characters like "&" and ";", it is producing the contents in the parentheses no matter whether they belong to a url.
+<br>
 <img src="lab-report-5-images/22fix.png" width="500" />
 <br>
 To fix the bug, we need to add an if statement at this part (line 22-23) to check the quotation marks in the markdown file. We need to exclude the content in the quotation marks in the url.
